@@ -1,27 +1,19 @@
 Application to convert latex math-mode code to a .png file.
 
-This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>
-
-
 This python application will convert LaTeX (math-mode) code to a png image file.
 It depends on the ImageTk package (not included in standard python distribution). Other python dependencies (os, Tkinter) are included in a standard python distribution, so the user need not worry about these.
 
 System requirements: linux operating system
-Package requirements: dvipng, python, latex
+Package requirements: dvipng, python, ImageTk, latex
 
 Please note: The application will crop your text appropriately, but cannot handle more than 1 page. However its primary limitation is the platform dependence: the 'latex' command works in linux, but not windows. It also depends on the dvipng package (only available for linux) to convert the .dvi file to a .png file.
+
+To use the application:
+Double click on the application, and choose run. Alternatively, run python pylatexpng.py from the command line.
 
 Extra info for latex experts: 
 The application takes input from the user via a text box. The input is already enclosed by math-mode tags, and includes {amsmath,amssymb,amsthm} in the preamble. To move to a new line, use '\\'.
 
+TODO list:
+Add an easy way to change destination folder (typing the entire file path is clumsy)
+Add a help button to the menu (an error message is here, but it does not ever get shown)
